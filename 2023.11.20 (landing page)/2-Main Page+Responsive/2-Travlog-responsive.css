@@ -17,8 +17,12 @@
     font-weight: 800;
 }
 
+
+/* 1 Section */
+
 :root {
     --bs-border-radius: 1.5rem;
+    --primary-color: #F85E9F;
 }
 
 body {
@@ -27,6 +31,12 @@ body {
 
 img {
     max-width:100% ;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -47,6 +57,23 @@ nav.navbar li.active a {
     color: #222831;
 }
 
+section.home .decoration  {
+    position: relative; 
+}
+
+
+section.home .decoration::before {
+    content: "";
+    background: url('icons/deco.png');
+    width: 65px;
+    height: 170px;
+    display: block;
+    position:absolute;
+    bottom: 0rem;
+    left: -71px;
+}
+
+
 .btn {
     --bs-btn-padding-y: .9rem;
     --bs-btn-padding-x: 2rem;
@@ -60,10 +87,10 @@ nav.navbar li.active a {
    --bs-btn-hover-border-color: #EEEEEE;
 }
 
-    /* added height to adjust to singup button  */
-.btn-empty {
-    max-height: 51px;
-}
+        /* added height to adjust to singup button  */
+        .btn-empty {
+        max-height: 51px;
+        }
 
 .btn-primary {
     --bs-btn-bg: #5D50C6;
@@ -79,7 +106,7 @@ nav.navbar li.active a {
 
 .btn-shadow {
     box-shadow: 0 15px 15px 0 #00000012;
-    --bs-btn-color: #F85E9F;
+    --bs-btn-color: var(--primary-color);
     font-size: 14px;
     display: inline-flex;
     gap: 10px;
@@ -101,7 +128,7 @@ nav.navbar li.active a {
 }
 
 .home h2 span {
-    color: #F85E9F;
+    color: var(--primary-color);;
 }
 
 .home p {
@@ -141,13 +168,33 @@ nav.navbar li.active a {
       border: none; 
       width: 48px;
       height: 49px;
-      background: url(icons/14.svg) no-repeat center center;
+      background: url(icons/14.svg) no-repeat  center center;
 }
- 
+
+
+.section-heading h3 {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 23px; 
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+
+.section-heading h2 {
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 120%;
+    margin: 1rem 0 0;
+}
+
+
+
+
 @media screen and (min-width: 992px) {
     nav.navbar {
         display: block;
-    }
+    } 
 }
 
 @media screen and (max-width: 992px) {
@@ -191,4 +238,31 @@ nav.navbar li.active a {
         font-size: 40px; 
     }
 
+    section.home .decoration::before {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+        .p-custom {
+            padding-left: 98px;
+        }
+}
+
+@media screen and (max-width: 1200px) {
+    .section-heading h2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-heading h2 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-heading h3 {
+        font-size: 16px;
+    }
 }
