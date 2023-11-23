@@ -18,8 +18,6 @@
 }
 
 
-/* 1 Section */
-
 :root {
     --bs-border-radius: 1.5rem;
     --primary-color: #F85E9F;
@@ -87,10 +85,10 @@ section.home .decoration::before {
    --bs-btn-hover-border-color: #EEEEEE;
 }
 
-        /* added height to adjust to singup button  */
-        .btn-empty {
-        max-height: 51px;
-        }
+    /* added height to adjust to singup button  */
+    .btn-empty {
+    max-height: 51px;
+    }
 
 .btn-primary {
     --bs-btn-bg: #5D50C6;
@@ -188,6 +186,27 @@ section.home .decoration::before {
     margin: 1rem 0 0;
 }
 
+.service {
+    height: 100%;
+    transition: all .5s ease-in-out;
+    border: 1px solid rgb(25, 24, 27, .1)
+}
+
+.service:hover {
+    box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.1);
+    border-color: white;
+}
+
+.service h3 {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.service p {
+   color: #19182580;
+   font-family: Inter;
+   font-size: 18px;
+}
 
 
 
@@ -245,7 +264,7 @@ section.home .decoration::before {
 
 @media screen and (min-width: 1400px) {
         .p-custom {
-            padding-left: 98px;
+            padding-left: 144px;
         }
 }
 
