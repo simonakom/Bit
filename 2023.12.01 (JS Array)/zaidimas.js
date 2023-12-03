@@ -10,11 +10,13 @@ function guessNumber() {
 	let inputElement = document.querySelector("#guess");
 	let resultParagraph = document.querySelector("#rez");
 	let guessCountElement = document.querySelector("#spejimu-skaicius");
-
+ 
 	if (spejimuSkaicius === 0) {
 		resultParagraph.innerText = `Spėjimų skaičius baigėsi, bandykite dar kartą perkrovę puslapį`;
 		return;
 	}
+
+	// return - funkcja baigia veikti ties return (jei atitinka jo salygas) ir netikrina toliau kitu salygu.
 
 	spejimuSkaicius--;
 	guessCountElement.innerText = spejimuSkaicius;
@@ -25,8 +27,6 @@ function guessNumber() {
 	} else if (inputValue < atsitiktinisSkaičius) {
 		resultParagraph.innerText = `Spėjimas buvo neteisingas, ieškomas skaičius yra didesnis`;
 	} else {
-		resultParagraph.innerText = `Teisingas spėjimas. Po ${
-			6 - spejimuSkaicius
-		} bandymų`;
+		resultParagraph.innerText = `Teisingas spėjimas. Po ${6 - spejimuSkaicius} bandymų`;
 	}
 }
