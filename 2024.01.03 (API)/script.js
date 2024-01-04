@@ -134,3 +134,10 @@ console.log(filteredArray);
 
 const isThereAWantedValue = array.some((value) => value.id === 7);
 console.log(isThereAWantedValue);
+
+
+const arr = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+arr.push(...arr2);
+console.log(...arr2);
